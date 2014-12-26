@@ -5,19 +5,17 @@ import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.mygdx.game.OneLevelHero;
 import com.mygdx.manager.CurrentManager;
 import com.mygdx.stage.BattleStage;
-import com.mygdx.ui.GameUi;
+import com.mygdx.stage.GameUiStage;
 
 public class BattleScreen implements Screen {
 
-	OneLevelHero game;
-	GameUi uiTable;
-	BattleStage battleStage;
-	TextButton fightButton;
-	TextButton fleeButton;
-	boolean isFight;
+	private GameUiStage uiTable;
+	private BattleStage battleStage;
+	private TextButton fightButton;
+	private TextButton fleeButton;
+	private boolean isFight;
 
 	public BattleScreen() {
 		isFight = false;
@@ -43,7 +41,7 @@ public class BattleScreen implements Screen {
 	public void show() {
 		battleStage = new BattleStage(CurrentManager.getInstance()
 				.getVillageInfo().getCurrentDungeon());
-		uiTable = new GameUi();
+		uiTable = new GameUiStage();
 
 		InputMultiplexer multiplexer = new InputMultiplexer();
 		multiplexer.addProcessor(0, uiTable);

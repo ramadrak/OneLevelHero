@@ -59,6 +59,14 @@ public class WorldStage extends Stage {
 		private String position;
 		private JSONArray connection;
 
+		public JSONArray getConnection() {
+			return connection;
+		}
+
+		public void setConnection(JSONArray connection) {
+			this.connection = connection;
+		}
+
 		private int posX;
 		private int posY;
 
@@ -254,7 +262,7 @@ public class WorldStage extends Stage {
 		worldNode temp = Assets.worldHashmap.get(CurrentManager.getInstance()
 				.getVillageInfo().getCurrentPosition());
 
-		int connectionNum = temp.connection.size();
+		int connectionNum = temp.getConnection().size();
 
 		JSONArray connections = new JSONArray();
 

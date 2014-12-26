@@ -97,12 +97,7 @@ public class Assets {
 
 	//JsonFile의 path를 읽어온다.
 	private static void jsonLoad() {
-		dungeon_json = (JSONObject) JSONValue.parse(Gdx.files.internal(
-				"data/dungeon.json").readString());
 
-		// 몬스터 설정 로드
-		monster_json = (JSONObject) JSONValue.parse(Gdx.files.internal(
-				"data/monster.json").readString());
 		json_file_path = (JSONObject) JSONValue.parse(Gdx.files.internal(
 				"data/load/json_file_path.json").readString());
 		jsonFileMap = JsonMapParser.mapParse(JsonFile.class,
