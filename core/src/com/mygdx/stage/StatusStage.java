@@ -2,12 +2,16 @@ package com.mygdx.stage;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
+import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.mygdx.controller.ScreenController;
+import com.mygdx.enums.ScreenEnum;
 import com.mygdx.state.Assets;
 
 public class StatusStage extends Stage {
@@ -53,6 +57,19 @@ public class StatusStage extends Stage {
 		skillTextButton = new TextButton("Skill&magic", skin);
 		exitTextButton = new TextButton("닫기", skin);
 		characterTextButton = new TextButton[3];
+		exitTextButton.addListener(new InputListener() {
+			@Override
+			public boolean touchDown(InputEvent event, float x, float y,
+					int pointer, int button) {
+				return true;
+			}
+
+			@Override
+			public void touchUp(InputEvent event, float x, float y,
+					int pointer, int button) {
+				new ScreenController(ScreenEnum.VILLAGE);
+			}
+		});
 
 		for (int i = 0; i < 3; i++) {
 			characterTextButton[i] = new TextButton("누르면 변환", skin);

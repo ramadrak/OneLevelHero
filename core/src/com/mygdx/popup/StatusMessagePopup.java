@@ -30,7 +30,7 @@ public class StatusMessagePopup extends MessagePopup {
 		setResizable(false);
 
 		Table table = new Table();
-		text("파티원");
+		text("파티원\n");
 		table.row();
 		Iterator<Hero> iterator = CurrentState.getInstance().getParty()
 				.getBattleMemberList().iterator();

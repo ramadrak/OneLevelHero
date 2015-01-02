@@ -22,7 +22,7 @@ public class MessagePopup extends Dialog {
 		padTop(70); // set padding on top of the dialog title  
 		getButtonTable().defaults().height(50); // set buttons height  
 		setPosition(400, 400);
-		setSize(600, 200);
+		setSize(1500, 600);
 		setModal(true);
 		setMovable(true);
 		setResizable(false);
@@ -45,12 +45,12 @@ public class MessagePopup extends Dialog {
 	@Override
 	public float getPrefWidth() {
 		// force dialog width  
-		return 480f;
+		return 500f;
 	}
 
 	@Override
 	public float getPrefHeight() {
 		// force dialog height  
-		return 240f;
+		return 500f;
 	}
 }

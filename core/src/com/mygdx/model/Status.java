@@ -84,9 +84,9 @@ public class Status {
 	}
 
 	public String toString() {
-		return "공격력 : " + getAttack() + " ,방어력 : " + getDefense() + ", 치명타 : "
-				+ getCritical() + ", 회피율 : " + getCritical() + ", 명중률 "
-				+ ", 체력 : " + getHealthPoint() + ", 스태미나 : " + getStamina()
-				+ ", 직업 : " + getJob();
+		return "공격력 : " + getAttack()+ "\n" + " ,방어력 : " + getDefense() + "\n" +",치명타 : "
+				+ getCritical() +"\n" + ", 회피율 : " + getCritical() +"\n" + ", 명중률 "
+				+ ", 체력 : " + getHealthPoint() +"\n" + ", 스태미나 : " + getStamina()
+				+"\n" + ", 직업 : " + getJob();
 	}
 }
