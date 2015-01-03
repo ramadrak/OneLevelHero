@@ -18,7 +18,7 @@ public class Unit {
 
 	public Texture getFaceImage() {
 		if (faceImage == null)
-			faceImage = Assets.imageFileMap.get(faceImagePath);
+			faceImage = Assets.characterTextureMap.get(faceImagePath);
 		return faceImage;
 	}
 
