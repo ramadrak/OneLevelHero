@@ -1,5 +1,7 @@
 ﻿package com.mygdx.game;
 
+import org.springframework.stereotype.Component;
+
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -8,6 +10,7 @@ import com.mygdx.enums.ScreenEnum;
 import com.mygdx.manager.LoadManager;
 import com.mygdx.manager.ScreenManager;
 
+@Component
 public class OneLevelHero extends Game {
 
 	@Override

@@ -62,4 +62,4 @@ build/
 .DS_Store
 
 ## DesktopLauncher
-desktop/src/
+desktop/src/com/mygdx/game/desktop/DesktopLauncher.java
